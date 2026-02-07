@@ -1,0 +1,79 @@
+|- - - - - - - - - - - - - - - SELECT - - - - - - - - - - - - - - -|
+
+-  Recuperar todas las columnas de una tabla:                       
+
+SELECT 
+	*
+FROM TABLE_1;
+
+
+- Recuperar columnas especificas 
+
+SELECT 
+	colum_1, 
+	colum_2,
+	colum_3
+FROM TABLE_1;
+
+|- - - - - - - - - - - - - - - WHERE - - - - - - - - - - - - - - -|
+
+-  Selecciona columnas específicas de la tabla donde se cumple una condición:
+
+SELECT 
+	colum_1, 
+	colum_2,
+	colum_3
+FROM TABLE_1
+WHERE colum_2 = 'predicado';
+
+|- - - - - - - - - - - - - - - COUNT - - - - - - - - - - - - - - -|
+
+- Contar todas las filas:
+
+SELECT                           |          SELECT
+	COUNT(*)		 |		     COUNT(column_1)											
+FROM TABLE_1;                    |          FROM TABLE_1;  
+
+|- - - - - - - - - - - - - - - DISTINCT - - - - - - - - - - - - - - -|
+
+- Valores únicos de una columna
+
+SELECT                           |          SELECT
+	DISTINCT *		 |		     DISTINCT column_1											
+FROM TABLE_1;                    |          FROM TABLE_1;  
+
+|- - - - - - - - - - - - - - - LIMIT - - - - - - - - - - - - - - -|
+
+-Especificar cuántas filas queremos recuperar
+
+SELECT 
+	*
+FROM TABLE_1
+LIMIT 5; 
+
+|- - - - - - - - - - - - - - - INSERT INTO - - - - - - - - - - - - - - -|
+
+- Insertar una nuevas filas con los datos 
+
+INSERT INTO TABLE_1 (ID, NAME)
+VALUES (1, 'FABIO');
+
+SELECT 
+	*
+FROM TABLE_1;
+
+|- - - - - - - - - - - - - - - UPDATE - - - - - - - - - - - - - - -|
+
+- Consultar y modificar la información 
+
+UPDATE TABLE_1
+SET columna1 = valor1, columna2 = valor2 
+WHERE condición; 
+
+
+|- - - - - - - - - - - - - - - DELETE - - - - - - - - - - - - - - -|
+
+-  Eliminar filas
+
+DELETE FROM TABLE_1
+WHERE ID IN ('1', '2'); 
